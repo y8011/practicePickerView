@@ -29,9 +29,12 @@ class ViewController: UIViewController
     // 表示に必要なのはString型なので、String型の配列にする
     var fruitsList = ["いちご","メロン","みかん"]
     
+    @IBOutlet weak var myPickerView: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        myPickerView.dataSource = self
+        myPickerView.delegate = self
     }
     
     // 列と行を決める
